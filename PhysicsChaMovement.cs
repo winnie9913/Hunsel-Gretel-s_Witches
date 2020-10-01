@@ -28,8 +28,8 @@ public class PhysicsChaMovement : MonoBehaviour
     {
        // Forcesystem_Movement();
        Velocity_Movement();
-        Active_jump();
-        Active_Attacking();
+      //  Active_jump();
+       // Active_Attacking();
     }
     void Forcesystem_Movement()
     {
@@ -65,26 +65,30 @@ public class PhysicsChaMovement : MonoBehaviour
             animController.SetBool("IsMoving", false);
         }
     }
-    void Active_jump()
-    {
-        if(Input.GetKeyDown(KeyCode.Space)== true && playerJumpstep < maximumJumpStep )
-        {
-            Vector2 currentVelocity = rigid2D.velocity;
-            rigid2D.velocity = new Vector2(currentVelocity.x, 0);
-            rigid2D.AddForce(new Vector2(0, 300.0f));
-            playerJumpstep += 1; // Add playerJumpstep by 1 everytime player jump.
-        }
-    }
+   // void Active_jump()
+   // {
+      //  if(Input.GetKeyDown(KeyCode.Space)== true && playerJumpstep < maximumJumpStep )
+       // {
+         //   Vector2 currentVelocity = rigid2D.velocity;
+         //   rigid2D.velocity = new Vector2(currentVelocity.x, 0);
+         //   rigid2D.AddForce(new Vector2(0, 300.0f));
+           // playerJumpstep += 1; // Add playerJumpstep by 1 everytime player jump.
+       // }
+       // if (Input.GetKeyDown(KeyCode.Space) == true && playerJumpstep < maximumJumpStep)
+       // {
 
-    void Active_Attacking()
-    {
-        if(Input.GetButtonDown("Fire1") == true ) //Fire1 Lmouse, Fire2 Rmouse, Fire3 Midmouse 
-        {
-            attackArea.nextAttackPower = attackpower;
-            animController.SetTrigger("Attacking");
+       // }
+  //  }
 
-        }
-    }
+   // void Active_Attacking()
+    //{
+      //  if(Input.GetButtonDown("Fire1") == true ) //Fire1 Lmouse, Fire2 Rmouse, Fire3 Midmouse 
+       // {
+        //    attackArea.nextAttackPower = attackpower;
+         //   animController.SetTrigger("Attacking");
+
+       // }
+   // }
 
 
     private void OnCollisionEnter2D(Collision2D hitWithObject)
@@ -114,9 +118,12 @@ public class PhysicsChaMovement : MonoBehaviour
 
         if (hitWithObject.gameObject.CompareTag("GameLevel_Ground") == true)
         {
-            print("Player is not collide with Level Ground anymore");
 
-            //canPlayerJump = false; //set canPalyerjump to false when this object leave the ground
+            canPlayerJump = false; //set canPalyerjump to false when this object leave the ground
+        }
+        else
+        {
+            canPlayerJump = true;
         }
     }
 

@@ -2,34 +2,34 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Collection : MonoBehaviour
-{
-    public GameObject BreadGameObject;
-    public DoughCollect gameManager;
-   
-    int DoughTotalCount;
-    int DoughCollected = 0;
+//public class Collection : MonoBehaviour
+//{
+//    public GameObject BreadGameObject;
+//    public DoughCollect gameManager;
 
-    void Awake()
-    {
-        // Disable your KeyGameObject
-        BreadGameObject.SetActive(false);
+//    int DoughTotalCount;
+//    int DoughCollected = 0;
 
-        // Get how many coins on scene
-        DoughTotalCount = GameObject.FindGameObjectsWithTag("Dough").Length;
-    }
+//    void Awake()
+//    {
+//        // Disable your KeyGameObject
+//        BreadGameObject.SetActive(false);
 
-    // Call this method from CoinScript each time you collect coin
-    public void DoughCollect()
-    {
-        
-        DoughCollected ++;
+//        // Get how many coins on scene
+//        DoughTotalCount = GameObject.FindGameObjectsWithTag("Dough").Length;
+//    }
 
-        // If you collected all coins - show KeyGameObject
-        if (DoughCollected == DoughTotalCount)
-            BreadGameObject.SetActive(true);
-    }
-    
-}
+//    // Call this method from CoinScript each time you collect coin
+//    public void DoughCollect()
+//    {
+
+//        DoughCollected++;
+
+//        // If you collected all coins - show KeyGameObject
+//        if (DoughCollected == DoughTotalCount)
+//            BreadGameObject.SetActive(true);
+//    }
+
+//}
 
 

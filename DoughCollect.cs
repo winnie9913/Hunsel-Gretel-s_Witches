@@ -7,12 +7,13 @@
 //    // Attach this script to coin prefab
 //    // Set this link in prefab to your GameManager on scene
 //    public DoughCollect gameManager;
-    
+//    public int DoughCollected;
     
 
 //    void OnCollect()
 //    {
-        
+//        gameManager.(DoughCollected);
+//        Destroy(gameObject);
 //    }
 //}
 

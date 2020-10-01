@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class BasicCharactormovement : MonoBehaviour
 {
@@ -24,15 +22,15 @@ public class BasicCharactormovement : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.S) == true)
         {
-            trans.position += new Vector3(0, -0.05f, 0);
+            //  trans.position += new Vector3(0, -0.07f, 0);
         }
         if (Input.GetKey(KeyCode.A) == true)
         {
-            trans.position += new Vector3(-0.05f, 0, 0);
+            trans.position += new Vector3(-0.07f, 0, 0);
         }
         if (Input.GetKey(KeyCode.D) == true)
         {
-            trans.position += new Vector3(0.05f, 0, 0);
+            trans.position += new Vector3(0.07f, 0, 0);
         }
     }
 

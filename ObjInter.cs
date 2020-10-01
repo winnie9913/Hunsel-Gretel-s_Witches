@@ -6,7 +6,8 @@ public class ObjInter : MonoBehaviour
 {
     public void DoInteraction()
     {
-        gameObject.SetActive(false);
+        Destroy(gameObject); 
+      
 
     }
      
